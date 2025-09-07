@@ -30,7 +30,9 @@
         <div class="flex">
           <img class="h-[50px]" src="./assets/Group.png" alt="" />
           <div>
-            <h2 class="font-bold">$<span  id="available-balance">45000</span></h2>
+            <h2 class="font-bold">
+              $<span id="available-balance">45000</span>
+            </h2>
             <p class="text-[#08080880]">Available Balance</p>
           </div>
         </div>
@@ -55,12 +57,18 @@
       <!-- card section -->
       <div class="grid grid-cols-3 min-h-[200px] gap-4 p-3">
         <!-- add money -->
-        <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+        <div
+          id="add-button"
+          class="border-2 border-gray-300 text-center p-3 rounded-xl"
+        >
           <img class="mx-auto" src="./assets/wallet1.png" alt="" />
           <h2 class="">Add Money</h2>
         </div>
         <!-- cashout -->
-        <div class="border-2 border-gray-300 text-center p-3 rounded-xl">
+        <div
+          id="cash-out-button"
+          class="border-2 border-gray-300 text-center p-3 rounded-xl"
+        >
           <img class="mx-auto" src="./assets/send1.png" alt="" />
           <h2>Cashout</h2>
         </div>
@@ -86,9 +94,10 @@
         </div>
       </div>
     </div>
-    <!-- Add money -->
+
     <div class="all-form-section max-w-lg mx-auto">
-      <div>
+      <!-- Add money -->
+      <div id="add-money-parent">
         <h1 class="my-5 font-bold">Add Money</h1>
         <form action="" class="bg-white rounded-2xl p-8">
           <div class="mb-3">
@@ -140,6 +149,10 @@
             Add Money
           </button>
         </form>
+      </div>
+
+      <div id="cash-out-parent" style="display: none">
+        <h1 class="my-5 font-bold">Cash out</h1>
       </div>
     </div>
 
