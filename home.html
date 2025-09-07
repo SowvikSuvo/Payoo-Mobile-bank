@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Paayo Home</title>
+    <title>Payoo Home</title>
     <!-- DaisyUI cdn -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
@@ -30,7 +30,7 @@
         <div class="flex">
           <img class="h-[50px]" src="./assets/Group.png" alt="" />
           <div>
-            <h2 class="font-bold">$<span>45000</span></h2>
+            <h2 class="font-bold">$<span  id="available-balance">45000</span></h2>
             <p class="text-[#08080880]">Available Balance</p>
           </div>
         </div>
@@ -93,7 +93,10 @@
         <form action="" class="bg-white rounded-2xl p-8">
           <div class="mb-3">
             <h1 class="font-semibold">Select a bank</h1>
-            <select class="select bg-[#f4f5f7] mt-3 rounded-3xl w-full">
+            <select
+              id="bank"
+              class="select bg-[#f4f5f7] mt-3 rounded-3xl w-full"
+            >
               <option>Select Bank</option>
               <option>AB bank</option>
               <option>IFIC bank</option>
@@ -104,6 +107,7 @@
             <label class="font-semibold" for="">Bank Account Number</label>
             <br />
             <input
+              id="account-number"
               type="text"
               placeholder="Enter 11 digit account number"
               class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full"
@@ -113,6 +117,7 @@
             <label class="font-semibold" for="">Amount to Add</label>
             <br />
             <input
+              id="add-amount"
               type="text"
               placeholder="Add Amount to withdraw"
               class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full"
@@ -122,16 +127,22 @@
             <label class="font-semibold" for="">Pin Number</label>
             <br />
             <input
+              id="add-pin"
               type="text"
               placeholder="Enter 4 digit pin number"
               class="input bg-[#f4f5f7] mt-3 rounded-3xl w-full"
             />
           </div>
-          <button class="btn bg-[#0874F2] text-white mt-5 w-full rounded-3xl">
+          <button
+            id="add-money-btn"
+            class="btn bg-[#0874F2] text-white mt-5 w-full rounded-3xl"
+          >
             Add Money
           </button>
         </form>
       </div>
     </div>
+
+    <script src="./home.js"></script>
   </body>
 </html>
