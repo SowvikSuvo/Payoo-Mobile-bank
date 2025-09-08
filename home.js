@@ -163,6 +163,7 @@ document.getElementById("bonus-button").addEventListener("click", function () {
 document
   .getElementById("pay-bill-button")
   .addEventListener("click", function () {
+    handleToggle("get-bonus-parent");
     handleButtonToggle("pay-bill-button");
   });
 
