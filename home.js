@@ -32,6 +32,12 @@ document
     const bank = document.getElementById("bank").value;
     const accountNumber = document.getElementById("account-number").value;
     const addAmount = parseInt(document.getElementById("add-amount").value);
+
+    if (addAmount <= 0) {
+      alert("invalid amount");
+      return;
+    }
+
     const pinNumber = parseInt(document.getElementById("add-pin").value);
     const availableBalance = parseInt(
       document.getElementById("available-balance").innerText
@@ -69,6 +75,10 @@ document.getElementById("withdraw-btn").addEventListener("click", function (e) {
     document.getElementById("available-balance").innerText
   );
 
+  if (amount <= 0 || amount > availableBalance) {
+    alert("Invalid amount");
+    return;
+  }
   if (agentNumber.length < 11) {
     alert("please provide valid agent number");
     return;
