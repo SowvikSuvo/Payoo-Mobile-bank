@@ -9,6 +9,19 @@ function handleToggle(id) {
   document.getElementById(id).style.display = "block";
 }
 
+// function to toggle button
+function handleButtonToggle(id) {
+  const formBtns = document.getElementsByClassName("form-btn");
+  for (const btn of formBtns) {
+    btn.classList.remove("border-[#0874f2]", "bg-[#0874f20d]");
+    btn.classList.add("border-gray-300");
+  }
+  document.getElementById(id).classList.remove("border-gray-300");
+  document
+    .getElementById(id)
+    .classList.add("border-[#0874f2]", "bg-[#0874f20d]");
+}
+
 // add money feature
 document
   .getElementById("add-money-btn")
@@ -68,6 +81,7 @@ document.getElementById("withdraw-btn").addEventListener("click", function (e) {
 // add money
 document.getElementById("add-button").addEventListener("click", function () {
   handleToggle("add-money-parent");
+  handleButtonToggle("add-button");
 });
 
 // cashout
@@ -75,6 +89,7 @@ document
   .getElementById("cash-out-button")
   .addEventListener("click", function () {
     handleToggle("cash-out-parent");
+    handleButtonToggle("cash-out-button");
   });
 
 // transfer money
@@ -82,20 +97,26 @@ document
   .getElementById("transfer-button")
   .addEventListener("click", function () {
     handleToggle("transfer-money-parent");
+    handleButtonToggle("transfer-button");
   });
 
 // get bonus
 document.getElementById("bonus-button").addEventListener("click", function () {
   handleToggle("get-bonus-parent");
+  handleButtonToggle("bonus-button");
 });
 
 // pay bill
-document.getElementById("pay-bill-button").addEventListener("click", function () {
-  handleToggle("pay-bill-parent");
-});
+document
+  .getElementById("pay-bill-button")
+  .addEventListener("click", function () {
+    handleButtonToggle("pay-bill-button");
+  });
 
-// Transition history 
-document.getElementById("transaction-button").addEventListener("click", function () {
-  handleToggle("transactions-parent");
-});
-
+// Transition history
+document
+  .getElementById("transaction-button")
+  .addEventListener("click", function () {
+    handleToggle("transactions-parent");
+    handleButtonToggle("transaction-button");
+  });
