@@ -1,5 +1,6 @@
 const validPin = 1234;
 
+// add money feature
 document
   .getElementById("add-money-btn")
   .addEventListener("click", function (e) {
@@ -27,6 +28,32 @@ document
     document.getElementById("available-balance").innerText =
       totalNewAvailableBalance;
   });
+
+// cashout feature //
+document.getElementById("withdraw-btn").addEventListener("click", function (e) {
+  e.preventDefault();
+  const amount = parseInt(document.getElementById("withdraw-amount").value);
+
+  const agentNumber = document.getElementById("agent-number").value;
+  const pinNumber = parseInt(document.getElementById("pin-number").value);
+  const availableBalance = parseInt(
+    document.getElementById("available-balance").innerText
+  );
+
+  if (agentNumber.length < 11) {
+    alert("please provide valid agent number");
+    return;
+  }
+  if (pinNumber !== validPin) {
+    alert("please provide valid pin number");
+    return;
+  }
+
+  const totalNewAvailableBalance = availableBalance - amount;
+  console.log(totalNewAvailableBalance);
+  document.getElementById("available-balance").innerText =
+    totalNewAvailableBalance;
+});
 
 //   toggling feature
 
